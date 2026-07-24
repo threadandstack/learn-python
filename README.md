@@ -35,6 +35,17 @@ Every module folder (`modules/NN_topic_name/`) contains:
   peeking. Compare your approach to it afterwards either way; that
   comparison is often where the real learning happens.
 
+### The teaching shape: told → try → compounds
+
+Every module is built the same way: **you're told** the concept plainly (not
+left to infer it), **you're given a chance to try it** with a worked example
+shown first so you're not guessing cold, and then **it compounds forward**
+— from Module 02 onward, each module's exercises deliberately reuse at
+least one thing from the module right before it, not just its own new
+material in isolation. The Phase-ending review modules (05, 10, 15) are the
+periodic version of this; the compounding itself is meant to happen every
+module, not just every four or five.
+
 ### The loop, every module
 
 1. Read `LESSON.md`.
