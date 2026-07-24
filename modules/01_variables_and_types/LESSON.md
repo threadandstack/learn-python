@@ -50,9 +50,11 @@ this actually do?" Try it now: type `python3`, then try `2 ** 10`, then
 
 ## Reading exercise
 
-Without running this, work out what each `print` outputs and what type each
-variable holds. Then run it for real (paste it into the REPL, or save as a
-scratch file and `python3` it) and check yourself.
+Try to work out what each `print` outputs before running it — using the
+"Concepts" section above, not guessing blind. If you're not sure, a guess
+is still worth writing down; you'll check it against the real output in a
+second either way, so there's no way to get this "wrong" in any way that
+matters.
 
 ```python
 a = 7
@@ -72,14 +74,31 @@ print(g)
 print(a, b)
 ```
 
-Questions:
-1. Before running it — what do you predict `c` and `d` are, and why are
-   they different despite both starting from `a / b`-style division?
-2. What does line `g = "a is " + str(a)` need the `str(a)` for? What
+### Worked example
+
+**Q: What do you predict `c` and `d` are, and why are they different
+despite both starting from `a / b`-style division?**
+
+Reasoning: the Concepts section above says `/` always returns a `float`,
+even when the numbers divide evenly, and `//` is floor division — divide,
+then round down. `a` is `7`, `b` is `2`. `7 / 2` is `3.5` exactly, so
+`/` just gives that back as a float: `3.5`. `7 // 2` divides the same way
+(`3.5`) but then rounds down to the nearest whole number: `3` — and
+because `//` is specifically the "give me a whole number" operator, that
+`3` comes back as an `int`, not a float.
+
+**A: `c` is `3.5` (a `float`). `d` is `3` (an `int`).**
+
+### Now try these the same way
+
+1. What does line `g = "a is " + str(a)` need the `str(a)` for? What
    happens if you write `g = "a is " + a` instead (try it — read the error
    message it gives you)?
-3. After the `a, b = b, a` line, what are `a` and `b`? Walk through *why*,
+2. After the `a, b = b, a` line, what are `a` and `b`? Walk through *why*,
    not just what.
+
+Then actually run the code (paste it into the REPL, or save as a scratch
+file and `python3` it) and check your reasoning against the real output.
 
 ## Writing exercise
 
