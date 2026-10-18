@@ -82,6 +82,16 @@ Start at [`modules/00_setup_and_orientation/`](modules/00_setup_and_orientation/
 It'll walk you through the terminal basics, a Python virtual environment, and
 installing `pytest`, before any real Python content.
 
+The short version, for when you've done it before: this project targets
+Python 3.12 (see `.python-version`), and `requirements.txt` pins exact
+versions so everyone gets the same install.
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
 ### Resuming a session
 
 Once Module 00 is done, you don't need to remember which module you were on
